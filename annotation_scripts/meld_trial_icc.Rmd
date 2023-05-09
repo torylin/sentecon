@@ -1,0 +1,38 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+library(agreement)
+df_list <- list()
+lower_list <- c()
+upper_list <- c()
+estimate_list <- c()
+k <- 1
+for (i in 1:5){
+  for (j in 1:5){
+    print(k)
+    df <- read.csv(paste0('../data/annotation_study/dev_MELD_trial_S', i, 'C', j, '_R6_long.csv'))
+    results <- dim_icc(df, model='2A', type='agreement', unit='average',
+                   object=Object, rater=Rater, score=Score, warnings=FALSE)
+    tidy_results <- tidy(results)
+    estimate_list <- c(estimate_list, tidy_results$estimate[5])
+    lower_list <- c(lower_list, tidy_results$lower[5])
+    upper_list <- c(upper_list, tidy_results$upper[5])
+    k <- k+1
+  }
+}
+```
+
+
+```{r}
+print(mean(estimate_list))
+print(mean(lower_list))
+print(mean(upper_list))
+```
+
