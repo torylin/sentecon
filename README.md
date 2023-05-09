@@ -4,5 +4,5 @@ This is the codebase for the paper SenteCon: Leveraging Lexicons to Learn Human-
 
 To run SenteCon on the evaluation datasets from the paper, run
 ```
-./bash/run_sentecon.sh $DATA_DIR
+./bash/run_sentecon.sh $SCRIPT_DIRECTORY
 ```
