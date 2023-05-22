@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/victorialin/Documents/2021-2022/Research/sentence_liwc/scripts/
+cd $1
 
 num_centroids=(1 2 3 4)
 text_names=(Utterance Utterance review)
