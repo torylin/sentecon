@@ -2,7 +2,7 @@
 
 cd $1
 
-lm_name=bert-base-uncased
+lm_name=all-mpnet-base-v2
 ref_corps=(LIWCVocab MELD SST LargeMovieReviewDataset MOSI)
 ref_csvs=(liwc_vocab.csv train.csv val.csv ref.csv ref.csv)
 ref_textnames=(text Utterance sentence review utterance)
