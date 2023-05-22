@@ -1,8 +1,8 @@
 #!/bin/bash
 
-cd /home/victorialin/Documents/2021-2022/Research/sentence_liwc/scripts/
+cd $1
 
-lm_name=roberta-base
+lm_name=all-mpnet-base-v2
 eval_datasets=(MELD MELD SST LargeMovieReviewDataset MOSI)
 targets=(Emotion Sentiment label sentiment sentiment)
 tasks=(classification classification classification classification regression)
