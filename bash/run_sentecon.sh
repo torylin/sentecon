@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/victorialin/Documents/2021-2022/Research/sentence_liwc/scripts/
+cd $1
 
 lm_name=bert-base-uncased
 ref_corps=(LIWCVocab MELD SST LargeMovieReviewDataset MOSI)
