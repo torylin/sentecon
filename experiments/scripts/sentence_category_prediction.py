@@ -37,6 +37,7 @@ def get_args():
 
 
 def compute_representation(row, embeddings, centroids, num_centroids, rel_cats, rel_cats_header, centroid_names, distance):
+    pdb.set_trace()
     embedding = embeddings[row.name]
     similarities = dict.fromkeys(rel_cats, 0)
 
@@ -101,7 +102,7 @@ lexicon = Empath()
 if args.lexicon == 'empath':
     category_names = list(lexicon.cats.keys())
 elif args.lexicon == 'LIWC':
-    parse, category_names = liwc.load_token_parser('../liwc_dict/LIWC2015_English_Flat.dic')
+    parse, category_names = liwc.load_token_parser('/home/victorialin/Documents/liwc_dict/LIWC2015_English_Flat.dic')
     category_names = category_names[21:]
 
 if args.num_centroids > 1:

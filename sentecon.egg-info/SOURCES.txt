@@ -1,0 +1,10 @@
+README.md
+setup.py
+sentecon/__init__.py
+sentecon/core.py
+sentecon.egg-info/PKG-INFO
+sentecon.egg-info/SOURCES.txt
+sentecon.egg-info/dependency_links.txt
+sentecon.egg-info/requires.txt
+sentecon.egg-info/top_level.txt
+test/test_library.py

@@ -1,0 +1,8 @@
+pandas
+numpy
+sentence_transformers
+torch
+scikit-learn
+empath
+liwc
+tqdm
