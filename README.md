@@ -7,11 +7,18 @@ SenteCon can be installed via `pip` from [PyPi](https://pypi.org/project/senteco
 pip install sentecon
 ```
 
-To use SenteCon, import as follows:
+To use SenteCon, import as follows. Pre-built `SenteCon` class' argument options for `lexicon` are `['LIWC', 'Empath']`. 
 ```
 from sentecon import SenteCon
 sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', lm_library='sentence-transformers', data_dir=$DATA_DIR, liwc_path=$LIWC_PATH)
 ```
+
+For LIWC, pre-built options for `lm` are:
+- `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1']` (corresponding to `lm_library=sentence-transformers`)
+- `['bert-base-uncased', 'roberta-base']` (corresponding to `lm_library=transformers`). 
+
+For Empath, pre-built options for `lm` are:
+- `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']` (corresponding to `lm_library=sentence-transformers`). 
 
 To generate SenteCon representations:
 ```
@@ -21,14 +28,7 @@ sentecon.embed(['this is a test', 'what do you mean'])
 # 1  0.298780  0.268381  0.305567  0.259470  0.291800  0.267315  0.269026  0.150925  0.249551  0.171428  0.190681  0.347195  ...  0.245808  0.229228  0.181226  0.210201  0.186952  0.246317  0.304549  0.286534  0.294494  0.239390  0.256054  0.236797
 ```
 
-Pre-built `SenteCon` class' argument options for `lexicon` are `['LIWC', 'Empath']`. 
-For LIWC, pre-built options for `lm` are:
-- `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1']` (corresponding to `lm_library=sentence-transformers`)
-- `['bert-base-uncased', 'roberta-base']` (corresponding to `lm_library=transformers`). 
-For Empath, pre-built options for `lm` are:
-- `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']` (corresponding to `lm_library=sentence-transformers`). 
-
-Details on how to use custom models will be added soon.
+Details on how to use custom models for `lm` will be added soon.
 
 Please note that the LIWC lexicon is proprietary, so it is not included in this repository. Users must have access to a LIWC `.dic` file, which can be purchased from [liwc.app](https://www.liwc.app/).
 
