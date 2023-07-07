@@ -41,8 +41,8 @@ sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', liwc_path=$LIWC_PATH
 **When using SenteCon representations for predictive tasks, it is often helpful to standardize over columns (and sometimes also helpful to standardize over rows).**
 
 Some features that will be added soon:
-- The ability to use custom models for `lm`.
-- Support for SenteCon+.
+- The ability to use custom models for `lm`
+- Support for SenteCon+
 
 ## Rerunning experiments
 
