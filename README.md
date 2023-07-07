@@ -32,13 +32,13 @@ sentecon.embed(['this is a test', 'what do you mean'])
 # 1  0.298780  0.268381  0.305567  0.259470  0.291800  0.267315  0.269026  0.150925  0.249551  0.171428  0.190681  0.347195  ...  0.245808  0.229228  0.181226  0.210201  0.186952  0.246317  0.304549  0.286534  0.294494  0.239390  0.256054  0.236797
 ```
 
-**When using these representations for predictive tasks, it is often helpful to standardize over columns (and sometimes also helpful to standardize over rows).**
-
 Please note that the LIWC lexicon is proprietary, so it is not included in this repository. To use the LIWC option, users must have access to a LIWC `.dic` file, which can be purchased from [liwc.app](https://www.liwc.app/). The path to this `.dic` file must be specified in the `liwc_path` argument when calling the `Sentecon` class, e.g.,
 
 ```
 sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', liwc_path=$LIWC_PATH)
 ```
+
+**When using SenteCon representations for predictive tasks, it is often helpful to standardize over columns (and sometimes also helpful to standardize over rows).**
 
 Some features that will be added soon:
 - The ability to use custom models for `lm`
