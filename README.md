@@ -32,7 +32,7 @@ sentecon.embed(['this is a test', 'what do you mean'])
 1  0.235688  0.261899  0.200191  0.243028  0.235971              0  0.183897                  0  0.215329  0.244065  ...  0.287771  0.229656  0.247356  0.285539  0.245884     0.258005  0.279332  0.269617                 0  0.249533
 ```
 
-Please note that the LIWC lexicon is proprietary, so it is not included in this repository. To use the LIWC option, users must have access to a LIWC `.dic` file, which can be purchased from [liwc.app](https://www.liwc.app/). The path to this `.dic` file must be specified in the `liwc_path` argument when calling the `Sentecon` class, e.g.,
+Please note that the LIWC lexicon is proprietary, so it is not included in this repository. To use the LIWC option, users must have access to a LIWC `.dic` file, which can be purchased from [liwc.app](https://www.liwc.app/). The path to this `.dic` file must be specified in the `liwc_path` argument when calling the `SenteCon` class, e.g.,
 
 ```
 sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', liwc_path=$LIWC_PATH)
