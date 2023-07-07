@@ -10,7 +10,7 @@ pip install sentecon
 ```
 ## Usage
 
-To use SenteCon, import the SenteCon class, which takes the arguments `lexicon` and `lm`.
+To use SenteCon, import the `SenteCon` class, which takes the arguments `lexicon` and `lm`.
 ```
 from sentecon import SenteCon
 ```
