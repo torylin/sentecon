@@ -8,7 +8,6 @@ SenteCon can be installed via `pip` from [PyPi](https://pypi.org/project/senteco
 ```
 pip install sentecon
 ```
-
 ## Usage
 
 To use SenteCon, import as follows. Pre-built `SenteCon` class' argument options for `lexicon` are `['LIWC', 'Empath']`. 
