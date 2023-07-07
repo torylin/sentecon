@@ -21,7 +21,7 @@ Pre-built options for `lm` are:
 - LIWC: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1', 'bert-base-uncased', 'roberta'base]`
 - Empath: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']`
 
-The following code produces SenteCon representations (returned as a `pandas` dataframe) that use Empath as the base lexicon $L$ and MPNet as the embedding language model $M_\theta$:
+The following code produces SenteCon representations (returned as a `pandas` dataframe) that use [Empath](https://github.com/Ejhfast/empath-client/) as the base lexicon $L$ and [MPNet](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) as the embedding language model $M_\theta$:
 
 ```
 sentecon = SenteCon(lexicon='Empath', lm='all-mpnet-base-v2')
