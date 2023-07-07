@@ -15,13 +15,16 @@ warnings.filterwarnings("ignore")
 tqdm.pandas()
 
 class SenteCon:
-    def __init__(self, lexicon, lm, lm_library, liwc_path=None, num_centroids=1, seed=230706):
+    def __init__(self, lexicon, lm, liwc_path=None, num_centroids=1, seed=230706):
         self.device = 'cuda' if cuda.is_available() else 'cpu'
         
         self.data_dir = os.path.join(os.path.dirname(__file__), 'data')
         self.lexicon = lexicon
         self.lm = lm
-        self.lm_library = lm_library
+        if self.lm in ['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1']:
+            self.lm_library = 'sentence-transformers'
+        elif self.lm in ['bert-base-uncased', 'roberta-base']:
+            self.lm_library = 'transformers'
         self.num_centroids = num_centroids
 
         if self.lexicon == 'Empath':

@@ -10,20 +10,18 @@ pip install sentecon
 ```
 ## Usage
 
-To use SenteCon, import as follows. Pre-built `SenteCon` class' argument options for `lexicon` are `['LIWC', 'Empath']`. 
+To use SenteCon, import as follows.
 ```
 from sentecon import SenteCon
-sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', lm_library='sentence-transformers', data_dir=$DATA_DIR, liwc_path=$LIWC_PATH)
+sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', liwc_path=$LIWC_PATH)
 ```
+Pre-built `SenteCon` argument options for `lexicon` are `['LIWC', 'Empath']`. 
 
-For LIWC, pre-built options for `lm` are:
-- `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1']` (corresponding to `lm_library=sentence-transformers`)
-- `['bert-base-uncased', 'roberta-base']` (corresponding to `lm_library=transformers`). 
+Pre-built options for `lm` are:
+- LIWC: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1', 'bert-base-uncased', 'roberta'base]`
+- Empath: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']`
 
-For Empath, pre-built options for `lm` are:
-- `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']` (corresponding to `lm_library=sentence-transformers`). 
-
-To generate SenteCon representations:
+To generate SenteCon representations (returned as a `pandas` dataframe):
 ```
 sentecon.embed(['this is a test', 'what do you mean'])
 #      affect    posemo    negemo       anx     anger       sad    social    family    friend    female      male   cogproc  ...      work   leisure      home     money     relig     death  informal     swear  netspeak    assent    nonflu    filler
@@ -33,7 +31,8 @@ sentecon.embed(['this is a test', 'what do you mean'])
 
 Details on how to use custom models for `lm` will be added soon.
 
-Please note that the LIWC lexicon is proprietary, so it is not included in this repository. Users must have access to a LIWC `.dic` file, which can be purchased from [liwc.app](https://www.liwc.app/).
+Please note that the LIWC lexicon is proprietary, so it is not included in this repository. To use the LIWC option, users must have access to a LIWC `.dic` file, which can be purchased from [liwc.app](https://www.liwc.app/).
+Otherwise, users should use the Empath option, which does not require specifying `liwc_path`.
 
 ## Rerunning experiments
 
