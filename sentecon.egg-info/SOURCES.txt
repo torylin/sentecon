@@ -7,4 +7,13 @@ sentecon.egg-info/SOURCES.txt
 sentecon.egg-info/dependency_links.txt
 sentecon.egg-info/requires.txt
 sentecon.egg-info/top_level.txt
+sentecon/data/EmpathVocab_centroids_Empath_all-MiniLM-L6-v2.csv
+sentecon/data/EmpathVocab_centroids_Empath_all-mpnet-base-v2.csv
+sentecon/data/LIWCVocab_centroids_LIWC_all-MiniLM-L6-v2.csv
+sentecon/data/LIWCVocab_centroids_LIWC_all-distilroberta-v1.csv
+sentecon/data/LIWCVocab_centroids_LIWC_all-mpnet-base-v2.csv
+sentecon/data/LIWCVocab_centroids_LIWC_bert-base-uncased.csv
+sentecon/data/LIWCVocab_centroids_LIWC_roberta-base.csv
+sentecon/data/empath_vocab.csv
+sentecon/data/liwc_vocab.csv
 test/test_library.py

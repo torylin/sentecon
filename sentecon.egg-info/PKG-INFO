@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: sentecon
-Version: 0.1.1
+Version: 0.1.5
 Summary: Interpretable deep embeddings using lexicons
 Home-page: https://github.com/torylin/sentecon/
 Author: Victoria Lin

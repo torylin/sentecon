@@ -7,13 +7,13 @@ SenteCon can be installed via `pip` from [PyPi](https://pypi.org/project/senteco
 pip install sentecon
 ```
 
-To use SenteCon, import as follows. To access pre-built options, clone this repository and set `DATA_DIR=sentecon/sentecon/data/`.
+To use SenteCon, import as follows:
 ```
 from sentecon import SenteCon
 sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', lm_library='sentence-transformers', data_dir=$DATA_DIR, liwc_path=$LIWC_PATH)
 ```
 
-Pre-built `SenteCon` class' argument options for `lexicon` are `['LIWC', 'Empath']`. For LIWC, pre-built options for `lm` are `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1']` (corresponding to `lm_library=sentence-transformers`) and `['bert-base-uncased', 'roberta-base']` (corresponding to `lm_library=transformers`). For Empath, pre-built options for `lm` are `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']` (corresponding to `lm_library=sentence-transformers`).
+Pre-built `SenteCon` class' argument options for `lexicon` are `['LIWC', 'Empath']`. For LIWC, pre-built options for `lm` are `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1']` (corresponding to `lm_library=sentence-transformers`) and `['bert-base-uncased', 'roberta-base']` (corresponding to `lm_library=transformers`). For Empath, pre-built options for `lm` are `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']` (corresponding to `lm_library=sentence-transformers`). Details on how to use custom models will be added soon.
 
 To generate SenteCon representations:
 ```

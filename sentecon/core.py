@@ -15,10 +15,10 @@ warnings.filterwarnings("ignore")
 tqdm.pandas()
 
 class SenteCon:
-    def __init__(self, lexicon, lm, lm_library, data_dir, liwc_path=None, num_centroids=1, seed=230706):
+    def __init__(self, lexicon, lm, lm_library, liwc_path=None, num_centroids=1, seed=230706):
         self.device = 'cuda' if cuda.is_available() else 'cpu'
         
-        self.data_dir = data_dir
+        self.data_dir = os.path.join(os.path.dirname(__file__), 'data')
         self.lexicon = lexicon
         self.lm = lm
         self.lm_library = lm_library
