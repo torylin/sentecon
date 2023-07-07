@@ -4,7 +4,7 @@ SenteCon is a method for introducing human interpretability in deep language rep
 
 ## Setup
 
-SenteCon can be installed via `pip` from [PyPi](https://pypi.org/project/sentecon/):
+SenteCon can be installed via `pip` from [PyPI](https://pypi.org/project/sentecon/):
 ```
 pip install sentecon
 ```
