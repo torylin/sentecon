@@ -2,10 +2,14 @@
 
 SenteCon is a method for introducing human interpretability in deep language representations using lexicons. Given a passage of text, SenteCon encodes the text as a layer of interpretable categories over an existing deep language model, offering interpretability at little to no cost to downstream performance. For more information, please see our paper, [SenteCon: Leveraging Lexicons to Learn Human-Interpretable Language Representations](https://arxiv.org/pdf/2305.14728.pdf) (to appear in the Findings of ACL 2023).
 
+## Setup
+
 SenteCon can be installed via `pip` from [PyPi](https://pypi.org/project/sentecon/):
 ```
 pip install sentecon
 ```
+
+## Usage
 
 To use SenteCon, import as follows. Pre-built `SenteCon` class' argument options for `lexicon` are `['LIWC', 'Empath']`. 
 ```
@@ -31,6 +35,8 @@ sentecon.embed(['this is a test', 'what do you mean'])
 Details on how to use custom models for `lm` will be added soon.
 
 Please note that the LIWC lexicon is proprietary, so it is not included in this repository. Users must have access to a LIWC `.dic` file, which can be purchased from [liwc.app](https://www.liwc.app/).
+
+## Rerunning experiments
 
 To run SenteCon on the evaluation datasets from the paper, first clone this repository. Then use the command
 
