@@ -7,7 +7,7 @@ SenteCon can be installed via `pip` from [PyPi](https://pypi.org/project/senteco
 pip install sentecon
 ```
 
-To use SenteCon, import as follows. To access pre-built options, clone this repository and use `DATA_DIR=./sentecon/data/`.
+To use SenteCon, import as follows. To access pre-built options, clone this repository and set `DATA_DIR=sentecon/sentecon/data/`.
 ```
 from sentecon import SenteCon
 sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', lm_library='sentence-transformers', data_dir=$DATA_DIR, liwc_path=$LIWC_PATH)
@@ -31,5 +31,5 @@ To run SenteCon on the evaluation datasets from the paper, first clone this repo
 .experiments/bash/run_sentecon.sh $SCRIPT_DIRECTORY
 ```
 
-Human annotations of LIWC categories for the MELD dataset can be found under `experiments/data/MELD/annotation_scripts/`. These annotations are indexed by `S1` through `S5`, which correspond to sentence batches 1-5 (also under the same directory), and `C1` through `C5`, which correspond to category batches (listed in the paper appendix, Section B.3).
+Human annotations of LIWC categories for the MELD dataset can be found under `sentecon/experiments/data/MELD/annotation_scripts/`. These annotations are indexed by `S1` through `S5`, which correspond to sentence batches 1-5 (also under the same directory), and `C1` through `C5`, which correspond to category batches (listed in the paper appendix, Section B.3).
 
