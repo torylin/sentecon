@@ -15,7 +15,7 @@ To use SenteCon, import the SenteCon class, which takes the arguments `lexicon` 
 from sentecon import SenteCon
 ```
 
-Pre-built `SenteCon` argument options for `lexicon` are `['LIWC', 'Empath']`. 
+Pre-built options for `lexicon` are `['LIWC', 'Empath']`. 
 
 Pre-built options for `lm` are:
 - LIWC: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1', 'bert-base-uncased', 'roberta'base]`
