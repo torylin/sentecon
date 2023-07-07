@@ -7,7 +7,7 @@ SenteCon can be installed via `pip` from [PyPi](https://pypi.org/project/senteco
 pip install sentecon
 ```
 
-To use SenteCon, import as follows:
+To use SenteCon, import as follows. To access pre-built options, clone this repository and use `DATA_DIR=./sentecon/data/`.
 ```
 from sentecon import SenteCon
 sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', lm_library='sentence-transformers', data_dir=$DATA_DIR, liwc_path=$LIWC_PATH)

@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 tqdm.pandas()
 
 class SenteCon:
-    def __init__(self, lexicon, lm, lm_library, data_dir, liwc_path, num_centroids=1, seed=230706):
+    def __init__(self, lexicon, lm, lm_library, data_dir, liwc_path=None, num_centroids=1, seed=230706):
         self.device = 'cuda' if cuda.is_available() else 'cpu'
         
         self.data_dir = data_dir
@@ -28,6 +28,9 @@ class SenteCon:
             lexicon = Empath()
             self.category_names = list(lexicon.cats.keys())
         elif self.lexicon == 'LIWC':
+            if liwc_path == None:
+                print('No LIWC path provided')
+                exit()
             parse, category_names = liwc.load_token_parser(liwc_path)
             self.category_names = category_names[21:]
 
@@ -63,7 +66,7 @@ class SenteCon:
                     cluster_model.fit(cat_embeds)
                 except:
                     print('Empty centroids')
-                    pdb.set_trace()
+                    exit()
                 clusters = cluster_model.predict(cat_embeds)
                 for cluster in set(clusters):
                     centroids['{}_c{}'.format(category, cluster)] = cat_embeds[clusters == cluster].mean(axis=0)  
