@@ -17,11 +17,11 @@ from sentecon import SenteCon
 
 Pre-built options for `lexicon` are `['LIWC', 'Empath']`. 
 
-Pre-built options for `lm` are:
+Pre-built options for `lm` (all pre-trained) are:
 - LIWC: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1', 'bert-base-uncased', 'roberta-base']`
 - Empath: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']`
 
-The following code produces SenteCon representations (returned as a `pandas` dataframe) that use [Empath](https://github.com/Ejhfast/empath-client/) as the base lexicon $L$ and [MPNet](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) as the embedding language model $M_\theta$:
+The following code produces SenteCon representations (returned as a `pandas` dataframe) that use [Empath](https://github.com/Ejhfast/empath-client/) as the base lexicon $L$ and pre-trained [MPNet](https://huggingface.co/sentence-transformers/all-mpnet-base-v2) as the embedding language model $M_\theta$:
 
 ```
 sentecon = SenteCon(lexicon='Empath', lm='all-mpnet-base-v2')
@@ -41,7 +41,7 @@ sentecon = SenteCon(lexicon='LIWC', lm='all-mpnet-base-v2', liwc_path=$LIWC_PATH
 **When using SenteCon representations for predictive tasks, it is often helpful to standardize over columns (and sometimes also helpful to standardize over rows).**
 
 Some features that will be added soon:
-- The ability to use custom models for `lm`
+- The ability to use custom (e.g., fine-tuned) models for `lm`
 - Support for SenteCon+
 
 ## Rerunning experiments
