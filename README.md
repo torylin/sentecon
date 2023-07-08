@@ -49,7 +49,7 @@ Some features that will be added soon:
 To run SenteCon on the evaluation datasets from the paper, first clone this repository. Then use the command
 
 ```
-.experiments/bash/run_sentecon.sh $SCRIPT_DIRECTORY
+./experiments/bash/run_sentecon.sh $SCRIPT_DIRECTORY
 ```
 
 Human annotations of LIWC categories for the MELD dataset can be found under `sentecon/experiments/data/MELD/annotation_scripts/`. These annotations are indexed by `S1` through `S5`, which correspond to sentence batches 1-5 (also under the same directory), and `C1` through `C5`, which correspond to category batches (listed in the paper appendix, Section B.3).
