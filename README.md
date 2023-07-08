@@ -17,7 +17,7 @@ from sentecon import SenteCon
 
 Pre-built options for `lexicon` are `['LIWC', 'Empath']`. 
 
-Pre-built options for `lm` (all pre-trained) are:
+Pre-built options for `lm` (all pre-trained models) are:
 - LIWC: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2', 'all-distilroberta-v1', 'bert-base-uncased', 'roberta-base']`
 - Empath: `['all-mpnet-base-v2', 'all-MiniLM-L6-v2']`
 
