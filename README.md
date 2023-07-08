@@ -46,7 +46,7 @@ Some features that will be added soon:
 
 ## Rerunning experiments
 
-To run SenteCon on the evaluation datasets from the paper, first clone this repository. Then use the command
+To run SenteCon and SenteCon+ on the evaluation datasets from the paper, first clone this repository. Then use the command
 
 ```
 ./experiments/bash/run_sentecon.sh $SCRIPT_DIRECTORY
