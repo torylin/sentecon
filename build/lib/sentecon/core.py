@@ -15,7 +15,7 @@ warnings.filterwarnings("ignore")
 tqdm.pandas()
 
 class SenteCon:
-    def __init__(self, lexicon, lm, liwc_path=None, num_centroids=1, seed=230706):
+    def __init__(self, lexicon, lm, liwc_subset=True, liwc_path=None, num_centroids=1, seed=230706):
         self.device = 'cuda' if cuda.is_available() else 'cpu'
         
         self.data_dir = os.path.join(os.path.dirname(__file__), 'data')
@@ -34,13 +34,14 @@ class SenteCon:
             if liwc_path == None:
                 print('No LIWC path provided')
                 exit()
-            parse, category_names = liwc.load_token_parser(liwc_path)
-            self.category_names = category_names[21:]
+            parse, self.category_names = liwc.load_token_parser(liwc_path)
+            if liwc_subset:
+                self.category_names = self.category_names[21:]
 
         if self.num_centroids > 1:
             self.category_headers = []
             for cluster in range(self.num_centroids):
-                self.category_headers += ['{}_c{}'.format(category, cluster) for category in category_names]
+                self.category_headers += ['{}_c{}'.format(category, cluster) for category in self.category_names]
         else:
             self.category_headers = self.category_names
         

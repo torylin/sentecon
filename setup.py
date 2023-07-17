@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 setup(
     name='sentecon',
     packages=find_packages(include=['sentecon']),
-    version='0.1.6',
+    version='0.1.8',
     description='Interpretable deep embeddings using lexicons',
     author='Victoria Lin',
     url='https://github.com/torylin/sentecon/',
