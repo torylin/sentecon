@@ -27,9 +27,9 @@ The following code produces SenteCon representations (returned as a `pandas` dat
 sentecon = SenteCon(lexicon='Empath', lm='all-mpnet-base-v2')
 sentecon.embed(['this is a test', 'what do you mean'])
 
-       help    office     dance     money   wedding  domestic_work     sleep  medical_emergency      cold      hate  ...    weapon  children   monster     ocean    giving  contentment   writing     rural  positive_emotion   musical
-0  0.365208  0.304747  0.318054  0.335406  0.274722              0  0.266293                  0  0.269468  0.298770  ...  0.278442  0.265399  0.305324  0.287262  0.283115     0.345869  0.297544  0.278183                 0  0.282828
-1  0.235688  0.261899  0.200191  0.243028  0.235971              0  0.183897                  0  0.215329  0.244065  ...  0.287771  0.229656  0.247356  0.285539  0.245884     0.258005  0.279332  0.269617                 0  0.249533
+       help    office     dance     money   wedding  domestic_work     sleep  ...     ocean    giving  contentment   writing     rural  positive_emotion   musical
+0  0.284190  0.320671  0.267699  0.277306  0.273392       0.311223  0.305355  ...  0.277074  0.270200     0.265807  0.356591  0.266273          0.278889  0.283758
+1  0.244075  0.237357  0.220706  0.197963  0.222953       0.217883  0.219400  ...  0.180234  0.222138     0.246295  0.275586  0.183908          0.263977  0.220248
 ```
 
 Please note that the LIWC lexicon is proprietary, so it is not included in this repository. To use the LIWC option, users must have access to a LIWC `.dic` file, which can be purchased from [liwc.app](https://www.liwc.app/). The path to this `.dic` file must be specified in the `liwc_path` argument when calling the `SenteCon` class, e.g.,

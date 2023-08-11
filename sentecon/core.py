@@ -54,7 +54,9 @@ class SenteCon:
         # pdb.set_trace()
         self.centroids = pd.read_csv(os.path.join(self.data_dir,'{}Vocab_centroids_{}_{}.csv'.format(self.lexicon, self.lexicon, self.lm)))
         self.centroids = self.centroids.reindex(sorted(self.centroids.columns), axis=1)
-        self.centroid_names = sorted(list(set([col.split('_')[0] for col in self.centroids.columns])))
+        # pdb.set_trace()
+        self.centroid_names = self.centroids.columns
+        # self.centroid_names = sorted(list(set([col.split('_')[0] for col in self.centroids.columns])))
         
     def __compute_centroids(self, corpus_df, num_centroids, seed):
         centroids = dict()
@@ -80,6 +82,7 @@ class SenteCon:
         return centroids
     
     def __compute_representation(self, row, embeddings, centroids, num_centroids, rel_cats, rel_cats_header, centroid_names, device):
+        # pdb.set_trace()
         embedding = embeddings[row.name]
         similarities = dict.fromkeys(rel_cats, 0)
 
